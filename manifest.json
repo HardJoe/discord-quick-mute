@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Discord Quick Mute",
+  "version": "1.0.0",
+  "description": "Mute Discord voice chat without switching tabs.",
+  "host_permissions": ["<all_urls>"],
+  "permissions": ["scripting", "tabs"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "toggle-mute": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K"
+      },
+      "description": "Toggle mute"
+    },
+    "toggle-deafen": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L"
+      },
+      "description": "Toggle deafen"
+    }
+  },
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  }
+}

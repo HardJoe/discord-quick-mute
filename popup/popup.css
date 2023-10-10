@@ -1,0 +1,23 @@
+body {
+  width: 80px;
+  height: 90px;
+  /* Set the desired width for your popup */
+  padding: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.button {
+  margin: 10px;
+  /* Adjust the gap between buttons as needed */
+  padding: 10px;
+  background-color: #0074d9;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
