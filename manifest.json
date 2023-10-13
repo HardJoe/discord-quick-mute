@@ -33,5 +33,12 @@
       "48": "icons/unmute.png",
       "128": "icons/unmute.png"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/*"],
+      "allFrames" : true,
+      "js": ["content-script.js"]
+    }
+  ]
 }
