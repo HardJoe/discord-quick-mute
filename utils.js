@@ -4,7 +4,7 @@ export const getDiscordTabId = async () => {
     const discordTab = tabs[0];
     return discordTab.id;
   } else {
-    throw new Error("No Discord tab found.");
+    return null;
   }
 };
 
