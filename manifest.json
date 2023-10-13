@@ -24,14 +24,14 @@
     }
   },
   "icons": {
-    "48": "icons/unmute.png"
+    "48": "icons/mute.png"
   },
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
-      "16": "icons/unmute.png",
-      "48": "icons/unmute.png",
-      "128": "icons/unmute.png"
+      "16": "icons/mute.png",
+      "48": "icons/mute.png",
+      "128": "icons/mute.png"
     }
   },
   "content_scripts": [
