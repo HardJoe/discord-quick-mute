@@ -1,10 +1,11 @@
 body {
   width: 100px;
-  height: 140px;
+  height: 180px;
   padding: 10px;
 }
 
-.flex-container-popup, .buttons {
+.flex-container-popup,
+.buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,13 +23,17 @@ h3 {
   text-align: center;
 }
 
-.button {
-  /* Adjust the gap between buttons as needed */
-  padding: 10px;
-  background-color: #0074d9;
+button {
+  display: block;
+  /* background-color: #0074d9;
   color: #ffffff;
-  border: none;
+  border: none; */
   cursor: pointer;
+  width: 100%;
+}
+
+.block {
+  text-align: center;
 }
 
 .flex-container-button {

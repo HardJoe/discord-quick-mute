@@ -54,11 +54,21 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   const { isMuted, isDeafened } = message;
 
   const updateMuteButton = (iconPath, buttonText) => {
-    muteButton.innerHTML = `<div class="flex-container-button"><img src="${iconPath}"> ${buttonText}</div>`;
+    muteButton.innerHTML = `
+      <div class="flex-container-button">
+        <img src="${iconPath}"> 
+        ${buttonText}
+      </div>
+    `;
   };
 
   const updateDeafenButton = (iconPath, buttonText) => {
-    deafenButton.innerHTML = `<div class="flex-container-button"><img src="${iconPath}"> ${buttonText}</div>`;
+    deafenButton.innerHTML = `
+      <div class="flex-container-button">
+        <img src="${iconPath}"> 
+        ${buttonText}
+      </div>
+    `;
   };
 
   if (isDeafened) {
