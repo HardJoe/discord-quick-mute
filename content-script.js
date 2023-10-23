@@ -28,3 +28,17 @@ observer.observe(document, {
   childList: true,
   subtree: true,
 });
+
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.shiftKey && e.code === "KeyM") {
+    const muteButton = document.querySelector('[aria-label="Mute"]');
+    const muteAriaChecked = muteButton.getAttribute("aria-checked");
+    const isMuted = muteAriaChecked === "false";
+    chrome.runtime.sendMessage({ isMuted, isDeafened: false });
+  } else if (e.ctrlKey && e.shiftKey && e.code === "KeyD") {
+    const deafenButton = document.querySelector('[aria-label="Deafen"]');
+    const deafenAriaChecked = deafenButton.getAttribute("aria-checked");
+    const isDeafened = deafenAriaChecked === "false";
+    chrome.runtime.sendMessage({ isMuted: isDeafened, isDeafened });
+  }
+});
