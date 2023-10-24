@@ -11,17 +11,9 @@ export const getDiscordTabId = async () => {
 export const toggleMute = () => {
   const muteButton = document.querySelector('[aria-label="Mute"]');
   muteButton.click();
-  const muteAriaChecked = muteButton.getAttribute("aria-checked");
-  const isMuted = muteAriaChecked === "false";
-
-  chrome.runtime.sendMessage({ isMuted, isDeafened: false });
 };
 
 export const toggleDeafen = () => {
   const deafenButton = document.querySelector('[aria-label="Deafen"]');
   deafenButton.click();
-  const deafenAriaChecked = deafenButton.getAttribute("aria-checked");
-  const isDeafened = deafenAriaChecked === "false";
-
-  chrome.runtime.sendMessage({ isMuted: isDeafened, isDeafened });
 };
